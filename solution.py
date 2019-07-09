@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 import numpy as np
-from analysis.generator import ModelGConvTranspose, NOISE_DIM
+from generator import ModelGConvTranspose, NOISE_DIM
 from tqdm import tqdm
 import torch
 import torch.nn as nn
