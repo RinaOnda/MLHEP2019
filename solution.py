@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 import numpy as np
-from generator import ModelGConvTranspose, NOISE_DIM
+from generator import MyModelGConvTranspose, NOISE_DIM
 from tqdm import tqdm
 import torch
 import torch.nn as nn
@@ -19,7 +19,7 @@ def main():
     data_test = np.load(input_dir + '/data_test.npz', allow_pickle=True)
     test_data_path_out = output_dir + '/data_test_prediction.npz'
     
-    generator_cpu = ModelGConvTranspose(NOISE_DIM)
+    generator_cpu = MyModelGConvTranspose(NOISE_DIM)
     generator_cpu.load_state_dict(torch.load(os.path.dirname(os.path.abspath(__file__)) + '/gan.pt'))
     generator_cpu.eval()
     

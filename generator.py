@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 NOISE_DIM = 10
 
-class ModelGConvTranspose(nn.Module):
+class MyModelGConvTranspose(nn.Module):
     def __init__(self, z_dim):
         self.z_dim = z_dim
         super(MyModelGConvTranspose, self).__init__()
